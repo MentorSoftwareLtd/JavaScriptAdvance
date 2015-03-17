@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "async": "^0.9.0",
-    "rsvp": "^3.0.17"
+    "rsvp": "^3.0.17",
+    "sugar": "^1.4.1",
+    "underscore": "^1.8.2",
+    "underscore.string": "^3.0.3"
   }
 }
