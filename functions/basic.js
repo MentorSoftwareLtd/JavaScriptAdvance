@@ -9,10 +9,16 @@ function basic(a, b, c, d) {
 basic();
 basic(1,2,3,4);
 basic(1,2,3,4,5,6);
-basic(1,2,3,4,5,6,7);
 
 function funRet() {
     return 10;
+}
+
+var fun2 = function() {
+
+}
+function fun2() {
+
 }
 
 var retVal = funRet();

@@ -16,10 +16,10 @@ console.log(bar);
 
 //3) Jaka wartosc wyswietli funkcja console.log
 var bar = 10;
+var bar = 10;
 var foo = function() {
     var boo = function() {
         bar = 2;
-
     }();
 }();
 console.log(bar);
@@ -37,16 +37,23 @@ console.log(bar);
 
 
 //5)
+var foo = function() {
+    var boo = function() {
+        var bar = 2;
+
+    }();
+}();
+
 function bar() {
     function baz() {
     };
 
     console.log(
-            this.foo == foo,
-            window.bar == bar
+        this.foo == foo,
+        window.bar == bar
     );
 
-    console.log(baz);
+    console.log(this, baz);
 }
 bar();
 

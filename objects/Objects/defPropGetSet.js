@@ -6,7 +6,7 @@ function Person() {
     Object.defineProperty(this, 'b', {
         get: function () {
             console.log('called get');
-            return bValue;
+            return 100;
         },
         set: function (newValue) {
             console.log('called set');
@@ -18,6 +18,6 @@ function Person() {
 }
 
 var person = new Person();
-console.log(person.b);   //get
+console.log(person.b, typeof person.b);   //get
 person.b = 10;           //set
 console.log(person.b);   //get

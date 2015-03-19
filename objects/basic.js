@@ -1,7 +1,15 @@
-/**
- * Created by mdylag on 17/03/15.
- */
-var obj1 = {};
+var tab = ['0','A'];
+tab[0];
+tab[1];
+tab[10]='ad';
+console.log(tab);
+var tab2 = new Array();
+
+
+var obj1 = {
+    a: 10,
+    f : function() {}
+};
 
 var obj2 = new Object();
 

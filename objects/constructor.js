@@ -1,11 +1,9 @@
 /**
  * Created by mdylag on 17/03/15.
  */
-function X()
-{
+function X() {
     this.a = 10;
 }
-
 var obj_x = new X();
 console.log('x',obj_x);
 

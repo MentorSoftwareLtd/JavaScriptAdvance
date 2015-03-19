@@ -8,7 +8,7 @@ console.log(Object.isExtensible(foo)); // false
 // can't add new properties
 foo.z = 30;
 
-//can add
+//can modify
 //foo.x=20;
 //can delete
 //delete foo.x

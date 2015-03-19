@@ -22,3 +22,15 @@ var myFunction = function() {
 }();
 
 eval('var foo = 3; console.log(foo);'); // eval() scope
+
+
+//missing var
+function f1() {
+    function f() {
+        bar = 2;
+    };
+    f();
+    console.log(bar);
+}
+f1();
+console.log(bar);
