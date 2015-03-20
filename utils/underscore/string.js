@@ -7,7 +7,7 @@ var s = require("underscore.string");
 
 _.mixin(s.exports());
 
-s.capitalize('epeli')
+_.capitalize('epeli')
 
 s.numberFormat(1000, 2);
 
@@ -25,5 +25,5 @@ s.swapCase('hELLO');
 
 s.include("foobar", "ob");
 
-_.('Hello world').count('l');
+//s.('Hello world').count('l');
 //('<div>Blah blah blah</div>').escapeHTML();
