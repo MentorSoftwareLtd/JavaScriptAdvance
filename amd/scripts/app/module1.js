@@ -1,5 +1,3 @@
-
-
 define(["./module2", "./module3"],
     function(module3, module2) {
         //return an object to define the "my/shirt" module.

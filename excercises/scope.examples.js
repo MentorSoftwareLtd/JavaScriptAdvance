@@ -16,7 +16,6 @@ console.log(bar);
 
 //3) Jaka wartosc wyswietli funkcja console.log
 var bar = 10;
-var bar = 10;
 var foo = function() {
     var boo = function() {
         bar = 2;

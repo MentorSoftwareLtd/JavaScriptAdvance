@@ -4,9 +4,13 @@
   "description": "fddsfdsfds",
   "dependencies": {
     "async": "^0.9.0",
+    "fs-readfile-promise": "^1.1.0",
     "rsvp": "^3.0.17",
     "sugar": "^1.4.1",
     "underscore": "^1.8.2",
     "underscore.string": "^3.0.3"
+  },
+  "devDependencies": {
+    "lodash": "^3.8.0"
   }
 }
