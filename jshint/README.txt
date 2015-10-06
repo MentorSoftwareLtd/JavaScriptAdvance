@@ -1,4 +1,4 @@
 http://jshint.com/docs/
 
 Default file:
-https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+https://github.com/jshint/jshint/blob/master/examples/.jshintrcget()
