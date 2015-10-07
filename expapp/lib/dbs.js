@@ -6,11 +6,10 @@ var db;
 module.exports = function(callback) {
     if (!db) {
         MongoClient.connect(url, function (err, db) {
-
             if (err) {
                 console.log('Mongo Server error', err);
             } else {
-                console.log('Mongo server connected');
+                console.log('Mongo server connected !!!');
             }
             db = db;
             callback(err, db);

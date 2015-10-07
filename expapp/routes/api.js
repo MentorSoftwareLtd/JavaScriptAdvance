@@ -1,24 +1,40 @@
 var express = require('express');
 var router = express.Router();
-require('../lib/dbs')(function(err,db){
-    console.log('Connect',db);
-});
+var dbs = require('../lib/dbs');
 
 
-var people = [
-    {'fn': 'Mirek', 'ln' : 'Dylag'}
-];
 ///api/people
 router.get('/people', function(req, res) {
-    res.json(people);
+    dbs(function(err, db) {
+        var collection = db.collection('people');
+        collection.find({}).toArray(function(err, docs) {
+            if (err) {
+                res.status(403).json({});
+            } else {
+                console.log('Data', docs);
+                res.json(docs);
+            }
+        });
+
+    });
 });
 
 //api/add
 router.post('/add', function(req, res) {
-    console.log(req.body);
     if (req.body.fn && req.body.ln) {
-        res.status(201).json({});
-        people.push(req.body);
+        dbs(function(err, db) {
+            var collection = db.collection('people');
+            // Insert some documents
+            collection.insertOne(req.body,function(err, result) {
+                console.log(result);
+                if (err) {
+                    res.status(403).json({});
+                } else {
+                    res.status(201).json({});
+                }
+            });
+        });
+
     } else {
         res.status(204).json({});
     }

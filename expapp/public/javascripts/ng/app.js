@@ -18,19 +18,15 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('MainCtrl', function($scope) {
+app.controller('MainCtrl', function($scope, AppVersion, PeopleService) {
+    $scope.version = AppVersion;
+    console.log(PeopleService);
 });
 
-app.controller('PersonCtrl', function($scope, $http, $location) {
+app.controller('PersonCtrl', function($scope, PeopleService) {
     $scope.person = {};
     $scope.save = function(form) {
-        if (form.$valid) {
-            $http.post('/api/add',$scope.person)
-                .success(function() {
-                    console.log('Data saved', $location.url());
-                    $location.url('/people');
-                });
-        }
+
     };
 });
 
@@ -44,4 +40,22 @@ app.controller('PeopleCtrl', function($scope, $http) {
         );
     };
 
+});
+
+//Services
+app.value('AppVersion','1.0');
+
+app.service('PeopleService', function($http) {
+    this.load = function() {
+            $http.post('/api/add',$scope.person)
+                .success(function() {
+                    console.log('Data saved', $location.url());
+                    $location.url('/people');
+                });
+
+    };
+
+    this.save = function() {
+
+    };
 });
