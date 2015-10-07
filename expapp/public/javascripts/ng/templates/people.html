@@ -1,0 +1,16 @@
+<br>
+<button ng-click="load();">Load</button>
+<table>
+    <thead>
+    <th>Num.</th>
+    <th>First name</th>
+    <th>Last name</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in people">
+        <td>{{$index+1}}</td>
+        <td ng-bind="person.fn"></td>
+        <td>{{person.ln}}</td>
+    </tr>
+    </tbody>
+</table>

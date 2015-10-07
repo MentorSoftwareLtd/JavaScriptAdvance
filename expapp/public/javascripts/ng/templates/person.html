@@ -1,0 +1,26 @@
+<form novalidate name="personForm">
+    <p ng-show="personForm.fn.$invalid && (personForm.fn.$dirty
+    || personForm.$submitted)" class="error">
+        Fn is required</p>
+    <p>First name
+        <input name="fn" type="text"
+               ng-model="person.fn" placeholder="First name" required>
+    </p>
+    <p ng-show="personForm.ln.$invalid && (personForm.ln.$dirty
+    || personForm.$submitted)"
+       class="error">Ln is required</p>
+
+    <p>Last name
+        <input name="ln" type="text"
+               ng-model="person.ln" placeholder="Last Name" required>
+    </p>
+
+    <button
+            ng-click="save(personForm);">Save</button>
+    <p>Dirty {{personForm.$dirty}}</p>
+    <p>Pristine {{personForm.$pristine}}</p>
+    <p>Invalid {{personForm.$invalid}}</p>
+    <p>Valid {{personForm.$valid}}</p>
+    <pre>user = {{personForm.$submitted}}</pre>
+
+</form>
