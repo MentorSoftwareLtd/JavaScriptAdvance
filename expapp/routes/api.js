@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+require('../lib/dbs')(function(err,db){
+    console.log('Connect',db);
+});
+
 
 var people = [
     {'fn': 'Mirek', 'ln' : 'Dylag'}
