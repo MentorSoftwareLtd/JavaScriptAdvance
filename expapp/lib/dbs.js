@@ -15,5 +15,7 @@ module.exports = function(callback) {
             db = db;
             callback(err, db);
         });
+    } else {
+        callback(undefined, db);
     }
 };

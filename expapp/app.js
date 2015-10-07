@@ -11,6 +11,7 @@ var jq = require('./routes/jq');
 var ng = require('./routes/ng');
 
 var api = require('./routes/api');
+require('./lib/dbs')(function(){});
 
 var app = express();
 
